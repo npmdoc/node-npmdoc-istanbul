@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/gotwarlost/istanbul#readme"
-        
+
     >istanbul (v0.4.5)</a>
 </h1>
 <h4>Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests </h4>
@@ -58,1433 +58,1433 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul">module istanbul</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector">
             function <span class="apidocSignatureSpan">istanbul.</span>Collector
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.ContentWriter">
             function <span class="apidocSignatureSpan">istanbul.</span>ContentWriter
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter">
             function <span class="apidocSignatureSpan">istanbul.</span>FileWriter
             <span class="apidocSignatureSpan">(sync)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter">
             function <span class="apidocSignatureSpan">istanbul.</span>Instrumenter
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report">
             function <span class="apidocSignatureSpan">istanbul.</span>Report
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter">
             function <span class="apidocSignatureSpan">istanbul.</span>Reporter
             <span class="apidocSignatureSpan">(cfg, dir)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store">
             function <span class="apidocSignatureSpan">istanbul.</span>Store
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.TreeSummarizer">
             function <span class="apidocSignatureSpan">istanbul.</span>TreeSummarizer
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer">
             function <span class="apidocSignatureSpan">istanbul.</span>Writer
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul._yuiLoadHook">
             function <span class="apidocSignatureSpan">istanbul.</span>_yuiLoadHook
             <span class="apidocSignatureSpan">(matchFn, transformFn, verbose)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command">
             function <span class="apidocSignatureSpan">istanbul.</span>command
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.matcherFor">
             function <span class="apidocSignatureSpan">istanbul.</span>matcherFor
             <span class="apidocSignatureSpan">(options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Collector.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>ContentWriter.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>FileWriter.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Instrumenter.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Report.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Reporter.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Store.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>TreeSummarizer.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>Writer.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>cli</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>command.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>config</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>hook</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">istanbul.</span>utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">istanbul.</span>VERSION</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">istanbul.</span>assetsDir</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Collector">module istanbul.Collector</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.Collector">
             function <span class="apidocSignatureSpan">istanbul.</span>Collector
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Collector.prototype">module istanbul.Collector.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.prototype.add">
             function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>add
             <span class="apidocSignatureSpan">(coverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.prototype.dispose">
             function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>dispose
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.prototype.fileCoverageFor">
             function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>fileCoverageFor
             <span class="apidocSignatureSpan">(fileName)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.prototype.files">
             function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>files
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Collector.prototype.getFinalCoverage">
             function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>getFinalCoverage
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.ContentWriter">module istanbul.ContentWriter</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.ContentWriter.ContentWriter">
             function <span class="apidocSignatureSpan">istanbul.</span>ContentWriter
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.ContentWriter.prototype">module istanbul.ContentWriter.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.ContentWriter.prototype.println">
             function <span class="apidocSignatureSpan">istanbul.ContentWriter.prototype.</span>println
             <span class="apidocSignatureSpan">(str)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.ContentWriter.prototype.write">
             function <span class="apidocSignatureSpan">istanbul.ContentWriter.prototype.</span>write
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.FileWriter">module istanbul.FileWriter</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter.FileWriter">
             function <span class="apidocSignatureSpan">istanbul.</span>FileWriter
             <span class="apidocSignatureSpan">(sync)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter.super_">
             function <span class="apidocSignatureSpan">istanbul.FileWriter.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.FileWriter.prototype">module istanbul.FileWriter.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter.prototype.copyFile">
             function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>copyFile
             <span class="apidocSignatureSpan">(source, dest)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter.prototype.done">
             function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>done
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.FileWriter.prototype.writeFile">
             function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>writeFile
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Instrumenter">module istanbul.Instrumenter</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.Instrumenter">
             function <span class="apidocSignatureSpan">istanbul.</span>Instrumenter
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Instrumenter.prototype">module istanbul.Instrumenter.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.arrowBlockConverter">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>arrowBlockConverter
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.branchIncrementExprAst">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchIncrementExprAst
             <span class="apidocSignatureSpan">(varName, branchIndex, down)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.branchLocationFor">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchLocationFor
             <span class="apidocSignatureSpan">(name, index)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.branchName">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchName
             <span class="apidocSignatureSpan">(type, startLine, pathLocations)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.conditionalBranchInjector">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>conditionalBranchInjector
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.convertToBlock">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>convertToBlock
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.coverExport">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverExport
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.coverFunction">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverFunction
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.coverMetaProperty">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverMetaProperty
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.coverStatement">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverStatement
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.endIgnore">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>endIgnore
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.extractCurrentHint">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>extractCurrentHint
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.filterHints">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>filterHints
             <span class="apidocSignatureSpan">(comments)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.findLeaves">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>findLeaves
             <span class="apidocSignatureSpan">(node, accumulator, parent, property)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.fixColumnPositions">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>fixColumnPositions
             <span class="apidocSignatureSpan">(coverState)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.functionName">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>functionName
             <span class="apidocSignatureSpan">(node, line, location)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.getPreamble">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>getPreamble
             <span class="apidocSignatureSpan">(sourceCode, emitUseStrict)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.ifBlockConverter">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>ifBlockConverter
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.ifBranchInjector">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>ifBranchInjector
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.instrument">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrument
             <span class="apidocSignatureSpan">(code, filename, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.instrumentASTSync">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrumentASTSync
             <span class="apidocSignatureSpan">(program, filename, originalCode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.instrumentSync">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrumentSync
             <span class="apidocSignatureSpan">(code, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.isUseStrictExpression">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>isUseStrictExpression
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.lastFileCoverage">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>lastFileCoverage
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.lastSourceMap">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>lastSourceMap
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.locationsForNodes">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>locationsForNodes
             <span class="apidocSignatureSpan">(nodes)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.logicalExpressionBranchInjector">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>logicalExpressionBranchInjector
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.loopBlockConverter">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>loopBlockConverter
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.maybeAddSkip">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeAddSkip
             <span class="apidocSignatureSpan">(branchLocation)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.maybeAddType">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeAddType
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.maybeSkipNode">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeSkipNode
             <span class="apidocSignatureSpan">(node, type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.paranoidHandlerCheck">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>paranoidHandlerCheck
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.skipInit">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>skipInit
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.skipLeft">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>skipLeft
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.splice">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>splice
             <span class="apidocSignatureSpan">(statements, node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.startIgnore">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>startIgnore
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.statementName">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>statementName
             <span class="apidocSignatureSpan">(location, initValue)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.switchBranchInjector">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>switchBranchInjector
             <span class="apidocSignatureSpan">(node, walker)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.switchCaseInjector">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>switchCaseInjector
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Instrumenter.prototype.withBlockConverter">
             function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>withBlockConverter
             <span class="apidocSignatureSpan">(node)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Report">module istanbul.Report</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.Report">
             function <span class="apidocSignatureSpan">istanbul.</span>Report
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.create">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>create
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.getReportList">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>getReportList
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.loadAll">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>loadAll
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.mix">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>mix
             <span class="apidocSignatureSpan">(cons, proto)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.register">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>register
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.super_">
             function <span class="apidocSignatureSpan">istanbul.Report.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Report.prototype">module istanbul.Report.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.prototype.getDefaultConfig">
             function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>getDefaultConfig
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.prototype.synopsis">
             function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>synopsis
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Report.prototype.writeReport">
             function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>writeReport
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Reporter">module istanbul.Reporter</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter.Reporter">
             function <span class="apidocSignatureSpan">istanbul.</span>Reporter
             <span class="apidocSignatureSpan">(cfg, dir)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Reporter.prototype">module istanbul.Reporter.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter.prototype.add">
             function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>add
             <span class="apidocSignatureSpan">(fmt)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter.prototype.addAll">
             function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>addAll
             <span class="apidocSignatureSpan">(fmts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter.prototype.handleDone">
             function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>handleDone
             <span class="apidocSignatureSpan">(callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Reporter.prototype.write">
             function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>write
             <span class="apidocSignatureSpan">(collector, sync, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Store">module istanbul.Store</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.Store">
             function <span class="apidocSignatureSpan">istanbul.</span>Store
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.create">
             function <span class="apidocSignatureSpan">istanbul.Store.</span>create
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.getStoreList">
             function <span class="apidocSignatureSpan">istanbul.Store.</span>getStoreList
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.loadAll">
             function <span class="apidocSignatureSpan">istanbul.Store.</span>loadAll
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.mix">
             function <span class="apidocSignatureSpan">istanbul.Store.</span>mix
             <span class="apidocSignatureSpan">(cons, proto)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.register">
             function <span class="apidocSignatureSpan">istanbul.Store.</span>register
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Store.prototype">module istanbul.Store.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.dispose">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>dispose
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.get">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>get
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.getObject">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>getObject
             <span class="apidocSignatureSpan">(key)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.hasKey">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>hasKey
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.keys">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>keys
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.set">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>set
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Store.prototype.setObject">
             function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>setObject
             <span class="apidocSignatureSpan">(key, object)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.TreeSummarizer">module istanbul.TreeSummarizer</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.TreeSummarizer.TreeSummarizer">
             function <span class="apidocSignatureSpan">istanbul.</span>TreeSummarizer
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.TreeSummarizer.prototype">module istanbul.TreeSummarizer.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.TreeSummarizer.prototype.addFileCoverageSummary">
             function <span class="apidocSignatureSpan">istanbul.TreeSummarizer.prototype.</span>addFileCoverageSummary
             <span class="apidocSignatureSpan">(filePath, metrics)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.TreeSummarizer.prototype.getTreeSummary">
             function <span class="apidocSignatureSpan">istanbul.TreeSummarizer.prototype.</span>getTreeSummary
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Writer">module istanbul.Writer</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer.Writer">
             function <span class="apidocSignatureSpan">istanbul.</span>Writer
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer.super_">
             function <span class="apidocSignatureSpan">istanbul.Writer.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.Writer.prototype">module istanbul.Writer.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer.prototype.copyFile">
             function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>copyFile
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer.prototype.done">
             function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>done
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.Writer.prototype.writeFile">
             function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>writeFile
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.cli">module istanbul.cli</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.cli.runToCompletion">
             function <span class="apidocSignatureSpan">istanbul.cli.</span>runToCompletion
             <span class="apidocSignatureSpan">(args)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.command">module istanbul.command</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.command">
             function <span class="apidocSignatureSpan">istanbul.</span>command
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.create">
             function <span class="apidocSignatureSpan">istanbul.command.</span>create
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.getCommandList">
             function <span class="apidocSignatureSpan">istanbul.command.</span>getCommandList
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.loadAll">
             function <span class="apidocSignatureSpan">istanbul.command.</span>loadAll
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.mix">
             function <span class="apidocSignatureSpan">istanbul.command.</span>mix
             <span class="apidocSignatureSpan">(cons, proto)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.register">
             function <span class="apidocSignatureSpan">istanbul.command.</span>register
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.resolveCommandName">
             function <span class="apidocSignatureSpan">istanbul.command.</span>resolveCommandName
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.command.prototype">module istanbul.command.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.prototype.run">
             function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>run
             <span class="apidocSignatureSpan">(args, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.prototype.synopsis">
             function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>synopsis
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.prototype.toolName">
             function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>toolName
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.prototype.type">
             function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>type
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.command.prototype.usage">
             function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>usage
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.config">module istanbul.config</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.config.defaultConfig">
             function <span class="apidocSignatureSpan">istanbul.config.</span>defaultConfig
             <span class="apidocSignatureSpan">(includeBackCompatAttrs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.config.loadFile">
             function <span class="apidocSignatureSpan">istanbul.config.</span>loadFile
             <span class="apidocSignatureSpan">(file, overrides)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.config.loadObject">
             function <span class="apidocSignatureSpan">istanbul.config.</span>loadObject
             <span class="apidocSignatureSpan">(obj, overrides)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.hook">module istanbul.hook</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.hookCreateScript">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>hookCreateScript
             <span class="apidocSignatureSpan">(matcher, transformer, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.hookRequire">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>hookRequire
             <span class="apidocSignatureSpan">(matcher, transformer, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.hookRunInThisContext">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>hookRunInThisContext
             <span class="apidocSignatureSpan">(matcher, transformer, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.unhookCreateScript">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookCreateScript
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.unhookRequire">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookRequire
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.unhookRunInThisContext">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookRunInThisContext
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.hook.unloadRequireCache">
             function <span class="apidocSignatureSpan">istanbul.hook.</span>unloadRequireCache
             <span class="apidocSignatureSpan">(matcher)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul.utils">module istanbul.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.addDerivedInfo">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>addDerivedInfo
             <span class="apidocSignatureSpan">(coverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.addDerivedInfoForFile">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>addDerivedInfoForFile
             <span class="apidocSignatureSpan">(fileCoverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.blankSummary">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>blankSummary
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.incrementIgnoredTotals">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>incrementIgnoredTotals
             <span class="apidocSignatureSpan">(cov)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.mergeFileCoverage">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>mergeFileCoverage
             <span class="apidocSignatureSpan">(first, second)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.mergeSummaryObjects">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>mergeSummaryObjects
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.removeDerivedInfo">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>removeDerivedInfo
             <span class="apidocSignatureSpan">(coverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.summarizeCoverage">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>summarizeCoverage
             <span class="apidocSignatureSpan">(coverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.summarizeFileCoverage">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>summarizeFileCoverage
             <span class="apidocSignatureSpan">(fileCoverage)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.istanbul.utils.toYUICoverage">
             function <span class="apidocSignatureSpan">istanbul.utils.</span>toYUICoverage
             <span class="apidocSignatureSpan">(coverage)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul" id="apidoc.module.istanbul">module istanbul</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector" id="apidoc.element.istanbul.Collector">
         function <span class="apidocSignatureSpan">istanbul.</span>Collector
@@ -1514,9 +1514,9 @@ collector.add(obj2); //etc.
 reporter.add(&#x27;text&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.ContentWriter" id="apidoc.element.istanbul.ContentWriter">
         function <span class="apidocSignatureSpan">istanbul.</span>ContentWriter
@@ -1528,9 +1528,9 @@ reporter.add(&#x27;text&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter" id="apidoc.element.istanbul.FileWriter">
         function <span class="apidocSignatureSpan">istanbul.</span>FileWriter
@@ -1547,9 +1547,9 @@ reporter.add(&#x27;text&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter" id="apidoc.element.istanbul.Instrumenter">
         function <span class="apidocSignatureSpan">istanbul.</span>Instrumenter
@@ -1628,9 +1628,9 @@ All the features of istanbul can be accessed as a library.
 #### Generate reports given a bunch of coverage JSON objects
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report" id="apidoc.element.istanbul.Report">
         function <span class="apidocSignatureSpan">istanbul.</span>Report
@@ -1643,9 +1643,9 @@ All the features of istanbul can be accessed as a library.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter" id="apidoc.element.istanbul.Reporter">
         function <span class="apidocSignatureSpan">istanbul.</span>Reporter
@@ -1676,9 +1676,9 @@ reporter.add(&#x27;text&#x27;);
 reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store" id="apidoc.element.istanbul.Store">
         function <span class="apidocSignatureSpan">istanbul.</span>Store
@@ -1689,9 +1689,9 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
     <li>description and source-code<pre class="apidocCodePre">function Store() {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.TreeSummarizer" id="apidoc.element.istanbul.TreeSummarizer">
         function <span class="apidocSignatureSpan">istanbul.</span>TreeSummarizer
@@ -1704,9 +1704,9 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer" id="apidoc.element.istanbul.Writer">
         function <span class="apidocSignatureSpan">istanbul.</span>Writer
@@ -1719,9 +1719,9 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul._yuiLoadHook" id="apidoc.element.istanbul._yuiLoadHook">
         function <span class="apidocSignatureSpan">istanbul.</span>_yuiLoadHook
@@ -1769,9 +1769,9 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command" id="apidoc.element.istanbul.command">
         function <span class="apidocSignatureSpan">istanbul.</span>command
@@ -1782,9 +1782,9 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
     <li>description and source-code<pre class="apidocCodePre">function Command() {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.matcherFor" id="apidoc.element.istanbul.matcherFor">
         function <span class="apidocSignatureSpan">istanbul.</span>matcherFor
@@ -1815,46 +1815,46 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Collector" id="apidoc.module.istanbul.Collector">module istanbul.Collector</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.Collector" id="apidoc.element.istanbul.Collector.Collector">
         function <span class="apidocSignatureSpan">istanbul.</span>Collector
@@ -1884,14 +1884,14 @@ collector.add(obj2); //etc.
 reporter.add(&#x27;text&#x27;);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Collector.prototype" id="apidoc.module.istanbul.Collector.prototype">module istanbul.Collector.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.prototype.add" id="apidoc.element.istanbul.Collector.prototype.add">
         function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>add
@@ -1928,9 +1928,9 @@ reporter.write(collector, sync, function () {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.prototype.dispose" id="apidoc.element.istanbul.Collector.prototype.dispose">
         function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>dispose
@@ -1943,9 +1943,9 @@ reporter.write(collector, sync, function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.prototype.fileCoverageFor" id="apidoc.element.istanbul.Collector.prototype.fileCoverageFor">
         function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>fileCoverageFor
@@ -1960,9 +1960,9 @@ reporter.write(collector, sync, function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.prototype.files" id="apidoc.element.istanbul.Collector.prototype.files">
         function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>files
@@ -1975,9 +1975,9 @@ reporter.write(collector, sync, function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Collector.prototype.getFinalCoverage" id="apidoc.element.istanbul.Collector.prototype.getFinalCoverage">
         function <span class="apidocSignatureSpan">istanbul.Collector.prototype.</span>getFinalCoverage
@@ -1995,14 +1995,14 @@ reporter.write(collector, sync, function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.ContentWriter" id="apidoc.module.istanbul.ContentWriter">module istanbul.ContentWriter</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.ContentWriter.ContentWriter" id="apidoc.element.istanbul.ContentWriter.ContentWriter">
         function <span class="apidocSignatureSpan">istanbul.</span>ContentWriter
@@ -2014,14 +2014,14 @@ reporter.write(collector, sync, function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.ContentWriter.prototype" id="apidoc.module.istanbul.ContentWriter.prototype">module istanbul.ContentWriter.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.ContentWriter.prototype.println" id="apidoc.element.istanbul.ContentWriter.prototype.println">
         function <span class="apidocSignatureSpan">istanbul.ContentWriter.prototype.</span>println
@@ -2032,9 +2032,9 @@ reporter.write(collector, sync, function () {
     <li>description and source-code<pre class="apidocCodePre">println = function (str) { this.write(str + &#x27;\n&#x27;); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.ContentWriter.prototype.write" id="apidoc.element.istanbul.ContentWriter.prototype.write">
         function <span class="apidocSignatureSpan">istanbul.ContentWriter.prototype.</span>write
@@ -2061,14 +2061,14 @@ reporter.write(collector, sync, function () {
 For the gory details consult the [public API](http://gotwarlost.github.com/istanbul/public/apidocs/index.html)
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.FileWriter" id="apidoc.module.istanbul.FileWriter">module istanbul.FileWriter</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter.FileWriter" id="apidoc.element.istanbul.FileWriter.FileWriter">
         function <span class="apidocSignatureSpan">istanbul.</span>FileWriter
@@ -2085,9 +2085,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter.super_" id="apidoc.element.istanbul.FileWriter.super_">
         function <span class="apidocSignatureSpan">istanbul.FileWriter.</span>super_
@@ -2100,14 +2100,14 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.FileWriter.prototype" id="apidoc.module.istanbul.FileWriter.prototype">module istanbul.FileWriter.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter.prototype.copyFile" id="apidoc.element.istanbul.FileWriter.prototype.copyFile">
         function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>copyFile
@@ -2121,9 +2121,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter.prototype.done" id="apidoc.element.istanbul.FileWriter.prototype.done">
         function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>done
@@ -2136,9 +2136,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.FileWriter.prototype.writeFile" id="apidoc.element.istanbul.FileWriter.prototype.writeFile">
         function <span class="apidocSignatureSpan">istanbul.FileWriter.prototype.</span>writeFile
@@ -2151,14 +2151,14 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Instrumenter" id="apidoc.module.istanbul.Instrumenter">module istanbul.Instrumenter</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.Instrumenter" id="apidoc.element.istanbul.Instrumenter.Instrumenter">
         function <span class="apidocSignatureSpan">istanbul.</span>Instrumenter
@@ -2237,14 +2237,14 @@ All the features of istanbul can be accessed as a library.
 #### Generate reports given a bunch of coverage JSON objects
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Instrumenter.prototype" id="apidoc.module.istanbul.Instrumenter.prototype">module istanbul.Instrumenter.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.arrowBlockConverter" id="apidoc.element.istanbul.Instrumenter.prototype.arrowBlockConverter">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>arrowBlockConverter
@@ -2264,9 +2264,9 @@ All the features of istanbul can be accessed as a library.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.branchIncrementExprAst" id="apidoc.element.istanbul.Instrumenter.prototype.branchIncrementExprAst">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchIncrementExprAst
@@ -2289,9 +2289,9 @@ All the features of istanbul can be accessed as a library.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.branchLocationFor" id="apidoc.element.istanbul.Instrumenter.prototype.branchLocationFor">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchLocationFor
@@ -2304,9 +2304,9 @@ All the features of istanbul can be accessed as a library.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.branchName" id="apidoc.element.istanbul.Instrumenter.prototype.branchName">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>branchName
@@ -2333,9 +2333,9 @@ All the features of istanbul can be accessed as a library.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.conditionalBranchInjector" id="apidoc.element.istanbul.Instrumenter.prototype.conditionalBranchInjector">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>conditionalBranchInjector
@@ -2344,8 +2344,8 @@ All the features of istanbul can be accessed as a library.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">conditionalBranchInjector = function (node, walker) {
-    var bName = this.branchName(&#x27;cond-expr&#x27;, walker.startLineForNode(node), this.locationsForNodes([ node.consequent, node.alter\
-nate ])),
+    var bName = this.branchName(&#x27;cond-expr&#x27;, walker.startLineForNode(node), this.locationsForNodes([ node.consequent, node.alternate
+ ])),
         ast1 = this.branchIncrementExprAst(bName, 0),
         ast2 = this.branchIncrementExprAst(bName, 1);
 
@@ -2356,9 +2356,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.convertToBlock" id="apidoc.element.istanbul.Instrumenter.prototype.convertToBlock">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>convertToBlock
@@ -2377,9 +2377,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.coverExport" id="apidoc.element.istanbul.Instrumenter.prototype.coverExport">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverExport
@@ -2408,9 +2408,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.coverFunction" id="apidoc.element.istanbul.Instrumenter.prototype.coverFunction">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverFunction
@@ -2450,9 +2450,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.coverMetaProperty" id="apidoc.element.istanbul.Instrumenter.prototype.coverMetaProperty">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverMetaProperty
@@ -2465,9 +2465,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.coverStatement" id="apidoc.element.istanbul.Instrumenter.prototype.coverStatement">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>coverStatement
@@ -2521,9 +2521,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.endIgnore" id="apidoc.element.istanbul.Instrumenter.prototype.endIgnore">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>endIgnore
@@ -2536,9 +2536,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.extractCurrentHint" id="apidoc.element.istanbul.Instrumenter.prototype.extractCurrentHint">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>extractCurrentHint
@@ -2566,9 +2566,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.filterHints" id="apidoc.element.istanbul.Instrumenter.prototype.filterHints">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>filterHints
@@ -2598,9 +2598,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.findLeaves" id="apidoc.element.istanbul.Instrumenter.prototype.findLeaves">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>findLeaves
@@ -2618,9 +2618,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.fixColumnPositions" id="apidoc.element.istanbul.Instrumenter.prototype.fixColumnPositions">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>fixColumnPositions
@@ -2666,9 +2666,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.functionName" id="apidoc.element.istanbul.Instrumenter.prototype.functionName">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>functionName
@@ -2698,9 +2698,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.getPreamble" id="apidoc.element.istanbul.Instrumenter.prototype.getPreamble">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>getPreamble
@@ -2746,9 +2746,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.ifBlockConverter" id="apidoc.element.istanbul.Instrumenter.prototype.ifBlockConverter">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>ifBlockConverter
@@ -2762,9 +2762,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.ifBranchInjector" id="apidoc.element.istanbul.Instrumenter.prototype.ifBranchInjector">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>ifBranchInjector
@@ -2794,9 +2794,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.instrument" id="apidoc.element.istanbul.Instrumenter.prototype.instrument">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrument
@@ -2818,9 +2818,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.instrumentASTSync" id="apidoc.element.istanbul.Instrumenter.prototype.instrumentASTSync">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrumentASTSync
@@ -2885,9 +2885,9 @@ nate ])),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.instrumentSync" id="apidoc.element.istanbul.Instrumenter.prototype.instrumentSync">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>instrumentSync
@@ -2938,8 +2938,8 @@ nate ])),
 var istanbul = require(&#x27;istanbul&#x27;);
 var instrumenter = new istanbul.Instrumenter();
 
-var generatedCode = instrumenter.<span class="apidocCodeKeywordSpan">instrumentSync</span>(&#x27;function meaningOfLife() { retu\
-rn 42; }&#x27;,
+var generatedCode = instrumenter.<span class="apidocCodeKeywordSpan">instrumentSync</span>(&#x27;function meaningOfLife() { return
+ 42; }&#x27;,
     &#x27;filename.js&#x27;);
 ```
 
@@ -2949,9 +2949,9 @@ rn 42; }&#x27;,
 var istanbul = require(&#x27;istanbul&#x27;),
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.isUseStrictExpression" id="apidoc.element.istanbul.Instrumenter.prototype.isUseStrictExpression">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>isUseStrictExpression
@@ -2966,9 +2966,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.lastFileCoverage" id="apidoc.element.istanbul.Instrumenter.prototype.lastFileCoverage">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>lastFileCoverage
@@ -2981,9 +2981,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.lastSourceMap" id="apidoc.element.istanbul.Instrumenter.prototype.lastSourceMap">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>lastSourceMap
@@ -2996,9 +2996,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.locationsForNodes" id="apidoc.element.istanbul.Instrumenter.prototype.locationsForNodes">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>locationsForNodes
@@ -3016,9 +3016,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.logicalExpressionBranchInjector" id="apidoc.element.istanbul.Instrumenter.prototype.logicalExpressionBranchInjector">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>logicalExpressionBranchInjector
@@ -3053,9 +3053,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.loopBlockConverter" id="apidoc.element.istanbul.Instrumenter.prototype.loopBlockConverter">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>loopBlockConverter
@@ -3068,9 +3068,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.maybeAddSkip" id="apidoc.element.istanbul.Instrumenter.prototype.maybeAddSkip">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeAddSkip
@@ -3094,9 +3094,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.maybeAddType" id="apidoc.element.istanbul.Instrumenter.prototype.maybeAddType">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeAddType
@@ -3117,9 +3117,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.maybeSkipNode" id="apidoc.element.istanbul.Instrumenter.prototype.maybeSkipNode">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>maybeSkipNode
@@ -3141,9 +3141,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.paranoidHandlerCheck" id="apidoc.element.istanbul.Instrumenter.prototype.paranoidHandlerCheck">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>paranoidHandlerCheck
@@ -3162,9 +3162,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.skipInit" id="apidoc.element.istanbul.Instrumenter.prototype.skipInit">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>skipInit
@@ -3179,9 +3179,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.skipLeft" id="apidoc.element.istanbul.Instrumenter.prototype.skipLeft">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>skipLeft
@@ -3194,9 +3194,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.splice" id="apidoc.element.istanbul.Instrumenter.prototype.splice">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>splice
@@ -3211,9 +3211,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.startIgnore" id="apidoc.element.istanbul.Instrumenter.prototype.startIgnore">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>startIgnore
@@ -3226,9 +3226,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.statementName" id="apidoc.element.istanbul.Instrumenter.prototype.statementName">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>statementName
@@ -3250,9 +3250,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.switchBranchInjector" id="apidoc.element.istanbul.Instrumenter.prototype.switchBranchInjector">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>switchBranchInjector
@@ -3276,9 +3276,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.switchCaseInjector" id="apidoc.element.istanbul.Instrumenter.prototype.switchCaseInjector">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>switchCaseInjector
@@ -3295,9 +3295,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Instrumenter.prototype.withBlockConverter" id="apidoc.element.istanbul.Instrumenter.prototype.withBlockConverter">
         function <span class="apidocSignatureSpan">istanbul.Instrumenter.prototype.</span>withBlockConverter
@@ -3310,14 +3310,14 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Report" id="apidoc.module.istanbul.Report">module istanbul.Report</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.Report" id="apidoc.element.istanbul.Report.Report">
         function <span class="apidocSignatureSpan">istanbul.</span>Report
@@ -3330,9 +3330,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.create" id="apidoc.element.istanbul.Report.create">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>create
@@ -3359,9 +3359,9 @@ commandArgs.push.apply(commandArgs, args.slice(pos + 1));
 try {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.getReportList" id="apidoc.element.istanbul.Report.getReportList">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>getReportList
@@ -3372,9 +3372,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">getReportList = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.loadAll" id="apidoc.element.istanbul.Report.loadAll">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>loadAll
@@ -3396,9 +3396,9 @@ Report.loadAll();
 Command.loadAll();
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.mix" id="apidoc.element.istanbul.Report.mix">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>mix
@@ -3413,9 +3413,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.register" id="apidoc.element.istanbul.Report.register">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>register
@@ -3426,9 +3426,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">register = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.super_" id="apidoc.element.istanbul.Report.super_">
         function <span class="apidocSignatureSpan">istanbul.Report.</span>super_
@@ -3441,14 +3441,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Report.prototype" id="apidoc.module.istanbul.Report.prototype">module istanbul.Report.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.prototype.getDefaultConfig" id="apidoc.element.istanbul.Report.prototype.getDefaultConfig">
         function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>getDefaultConfig
@@ -3461,9 +3461,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.prototype.synopsis" id="apidoc.element.istanbul.Report.prototype.synopsis">
         function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>synopsis
@@ -3476,9 +3476,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Report.prototype.writeReport" id="apidoc.element.istanbul.Report.prototype.writeReport">
         function <span class="apidocSignatureSpan">istanbul.Report.prototype.</span>writeReport
@@ -3491,14 +3491,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Reporter" id="apidoc.module.istanbul.Reporter">module istanbul.Reporter</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter.Reporter" id="apidoc.element.istanbul.Reporter.Reporter">
         function <span class="apidocSignatureSpan">istanbul.</span>Reporter
@@ -3529,14 +3529,14 @@ reporter.add(&#x27;text&#x27;);
 reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Reporter.prototype" id="apidoc.module.istanbul.Reporter.prototype">module istanbul.Reporter.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter.prototype.add" id="apidoc.element.istanbul.Reporter.prototype.add">
         function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>add
@@ -3577,9 +3577,9 @@ reporter.write(collector, sync, function () {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter.prototype.addAll" id="apidoc.element.istanbul.Reporter.prototype.addAll">
         function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>addAll
@@ -3610,9 +3610,9 @@ reporter.write(collector, sync, function () {
 For the gory details consult the [public API](http://gotwarlost.github.com/istanbul/public/apidocs/index.html)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter.prototype.handleDone" id="apidoc.element.istanbul.Reporter.prototype.handleDone">
         function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>handleDone
@@ -3628,9 +3628,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Reporter.prototype.write" id="apidoc.element.istanbul.Reporter.prototype.write">
         function <span class="apidocSignatureSpan">istanbul.Reporter.prototype.</span>write
@@ -3670,14 +3670,14 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
 For the gory details consult the [public API](http://gotwarlost.github.com/istanbul/public/apidocs/index.html)
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Store" id="apidoc.module.istanbul.Store">module istanbul.Store</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.Store" id="apidoc.element.istanbul.Store.Store">
         function <span class="apidocSignatureSpan">istanbul.</span>Store
@@ -3688,9 +3688,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     <li>description and source-code<pre class="apidocCodePre">function Store() {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.create" id="apidoc.element.istanbul.Store.create">
         function <span class="apidocSignatureSpan">istanbul.Store.</span>create
@@ -3717,9 +3717,9 @@ commandArgs.push.apply(commandArgs, args.slice(pos + 1));
 try {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.getStoreList" id="apidoc.element.istanbul.Store.getStoreList">
         function <span class="apidocSignatureSpan">istanbul.Store.</span>getStoreList
@@ -3730,9 +3730,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">getStoreList = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.loadAll" id="apidoc.element.istanbul.Store.loadAll">
         function <span class="apidocSignatureSpan">istanbul.Store.</span>loadAll
@@ -3754,9 +3754,9 @@ Report.loadAll();
 Command.loadAll();
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.mix" id="apidoc.element.istanbul.Store.mix">
         function <span class="apidocSignatureSpan">istanbul.Store.</span>mix
@@ -3771,9 +3771,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.register" id="apidoc.element.istanbul.Store.register">
         function <span class="apidocSignatureSpan">istanbul.Store.</span>register
@@ -3784,14 +3784,14 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">register = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Store.prototype" id="apidoc.module.istanbul.Store.prototype">module istanbul.Store.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.dispose" id="apidoc.element.istanbul.Store.prototype.dispose">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>dispose
@@ -3802,9 +3802,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">dispose = function () {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.get" id="apidoc.element.istanbul.Store.prototype.get">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>get
@@ -3815,9 +3815,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">get = function () { throw new Error(&#x22;get: must be overridden&#x22;); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.getObject" id="apidoc.element.istanbul.Store.prototype.getObject">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>getObject
@@ -3830,9 +3830,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.hasKey" id="apidoc.element.istanbul.Store.prototype.hasKey">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>hasKey
@@ -3843,9 +3843,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">hasKey = function () { throw new Error(&#x22;hasKey: must be overridden&#x22;); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.keys" id="apidoc.element.istanbul.Store.prototype.keys">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>keys
@@ -3856,9 +3856,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">keys = function () { throw new Error(&#x22;keys: must be overridden&#x22;); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.set" id="apidoc.element.istanbul.Store.prototype.set">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>set
@@ -3869,9 +3869,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">set = function () { throw new Error(&#x22;set: must be overridden&#x22;); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Store.prototype.setObject" id="apidoc.element.istanbul.Store.prototype.setObject">
         function <span class="apidocSignatureSpan">istanbul.Store.prototype.</span>setObject
@@ -3884,14 +3884,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.TreeSummarizer" id="apidoc.module.istanbul.TreeSummarizer">module istanbul.TreeSummarizer</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.TreeSummarizer.TreeSummarizer" id="apidoc.element.istanbul.TreeSummarizer.TreeSummarizer">
         function <span class="apidocSignatureSpan">istanbul.</span>TreeSummarizer
@@ -3904,14 +3904,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.TreeSummarizer.prototype" id="apidoc.module.istanbul.TreeSummarizer.prototype">module istanbul.TreeSummarizer.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.TreeSummarizer.prototype.addFileCoverageSummary" id="apidoc.element.istanbul.TreeSummarizer.prototype.addFileCoverageSummary">
         function <span class="apidocSignatureSpan">istanbul.TreeSummarizer.prototype.</span>addFileCoverageSummary
@@ -3924,9 +3924,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.TreeSummarizer.prototype.getTreeSummary" id="apidoc.element.istanbul.TreeSummarizer.prototype.getTreeSummary">
         function <span class="apidocSignatureSpan">istanbul.TreeSummarizer.prototype.</span>getTreeSummary
@@ -3940,14 +3940,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Writer" id="apidoc.module.istanbul.Writer">module istanbul.Writer</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer.Writer" id="apidoc.element.istanbul.Writer.Writer">
         function <span class="apidocSignatureSpan">istanbul.</span>Writer
@@ -3960,9 +3960,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer.super_" id="apidoc.element.istanbul.Writer.super_">
         function <span class="apidocSignatureSpan">istanbul.Writer.</span>super_
@@ -3975,14 +3975,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.Writer.prototype" id="apidoc.module.istanbul.Writer.prototype">module istanbul.Writer.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer.prototype.copyFile" id="apidoc.element.istanbul.Writer.prototype.copyFile">
         function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>copyFile
@@ -3995,9 +3995,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer.prototype.done" id="apidoc.element.istanbul.Writer.prototype.done">
         function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>done
@@ -4010,9 +4010,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.Writer.prototype.writeFile" id="apidoc.element.istanbul.Writer.prototype.writeFile">
         function <span class="apidocSignatureSpan">istanbul.Writer.prototype.</span>writeFile
@@ -4025,14 +4025,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.cli" id="apidoc.module.istanbul.cli">module istanbul.cli</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.cli.runToCompletion" id="apidoc.element.istanbul.cli.runToCompletion">
         function <span class="apidocSignatureSpan">istanbul.cli.</span>runToCompletion
@@ -4045,14 +4045,14 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.command" id="apidoc.module.istanbul.command">module istanbul.command</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.command" id="apidoc.element.istanbul.command.command">
         function <span class="apidocSignatureSpan">istanbul.</span>command
@@ -4063,9 +4063,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">function Command() {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.create" id="apidoc.element.istanbul.command.create">
         function <span class="apidocSignatureSpan">istanbul.command.</span>create
@@ -4092,9 +4092,9 @@ commandArgs.push.apply(commandArgs, args.slice(pos + 1));
 try {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.getCommandList" id="apidoc.element.istanbul.command.getCommandList">
         function <span class="apidocSignatureSpan">istanbul.command.</span>getCommandList
@@ -4105,9 +4105,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">getCommandList = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.loadAll" id="apidoc.element.istanbul.command.loadAll">
         function <span class="apidocSignatureSpan">istanbul.command.</span>loadAll
@@ -4129,9 +4129,9 @@ Report.loadAll();
 Command.loadAll();
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.mix" id="apidoc.element.istanbul.command.mix">
         function <span class="apidocSignatureSpan">istanbul.command.</span>mix
@@ -4146,9 +4146,9 @@ Command.loadAll();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.register" id="apidoc.element.istanbul.command.register">
         function <span class="apidocSignatureSpan">istanbul.command.</span>register
@@ -4159,9 +4159,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">register = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.resolveCommandName" id="apidoc.element.istanbul.command.resolveCommandName">
         function <span class="apidocSignatureSpan">istanbul.command.</span>resolveCommandName
@@ -4172,14 +4172,14 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">resolveCommandName = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.command.prototype" id="apidoc.module.istanbul.command.prototype">module istanbul.command.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.prototype.run" id="apidoc.element.istanbul.command.prototype.run">
         function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>run
@@ -4208,9 +4208,9 @@ function runToCompletion(args) {
 /* istanbul ignore if: untestable */
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.prototype.synopsis" id="apidoc.element.istanbul.command.prototype.synopsis">
         function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>synopsis
@@ -4223,9 +4223,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.prototype.toolName" id="apidoc.element.istanbul.command.prototype.toolName">
         function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>toolName
@@ -4238,9 +4238,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.prototype.type" id="apidoc.element.istanbul.command.prototype.type">
         function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>type
@@ -4253,9 +4253,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.command.prototype.usage" id="apidoc.element.istanbul.command.prototype.usage">
         function <span class="apidocSignatureSpan">istanbul.command.prototype.</span>usage
@@ -4268,14 +4268,14 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.config" id="apidoc.module.istanbul.config">module istanbul.config</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.config.defaultConfig" id="apidoc.element.istanbul.config.defaultConfig">
         function <span class="apidocSignatureSpan">istanbul.config.</span>defaultConfig
@@ -4340,9 +4340,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.config.loadFile" id="apidoc.element.istanbul.config.loadFile">
         function <span class="apidocSignatureSpan">istanbul.config.</span>loadFile
@@ -4377,9 +4377,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.config.loadObject" id="apidoc.element.istanbul.config.loadObject">
         function <span class="apidocSignatureSpan">istanbul.config.</span>loadObject
@@ -4392,14 +4392,14 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.hook" id="apidoc.module.istanbul.hook">module istanbul.hook</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.hookCreateScript" id="apidoc.element.istanbul.hook.hookCreateScript">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>hookCreateScript
@@ -4417,9 +4417,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.hookRequire" id="apidoc.element.istanbul.hook.hookRequire">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>hookRequire
@@ -4455,9 +4455,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.hookRunInThisContext" id="apidoc.element.istanbul.hook.hookRunInThisContext">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>hookRunInThisContext
@@ -4475,9 +4475,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.unhookCreateScript" id="apidoc.element.istanbul.hook.unhookCreateScript">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookCreateScript
@@ -4490,9 +4490,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.unhookRequire" id="apidoc.element.istanbul.hook.unhookRequire">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookRequire
@@ -4507,9 +4507,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.unhookRunInThisContext" id="apidoc.element.istanbul.hook.unhookRunInThisContext">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>unhookRunInThisContext
@@ -4522,9 +4522,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.hook.unloadRequireCache" id="apidoc.element.istanbul.hook.unloadRequireCache">
         function <span class="apidocSignatureSpan">istanbul.hook.</span>unloadRequireCache
@@ -4543,14 +4543,14 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.istanbul.utils" id="apidoc.module.istanbul.utils">module istanbul.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.addDerivedInfo" id="apidoc.element.istanbul.utils.addDerivedInfo">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>addDerivedInfo
@@ -4565,9 +4565,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.addDerivedInfoForFile" id="apidoc.element.istanbul.utils.addDerivedInfoForFile">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>addDerivedInfoForFile
@@ -4595,9 +4595,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.blankSummary" id="apidoc.element.istanbul.utils.blankSummary">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>blankSummary
@@ -4636,9 +4636,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.incrementIgnoredTotals" id="apidoc.element.istanbul.utils.incrementIgnoredTotals">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>incrementIgnoredTotals
@@ -4683,9 +4683,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.mergeFileCoverage" id="apidoc.element.istanbul.utils.mergeFileCoverage">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>mergeFileCoverage
@@ -4717,9 +4717,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.mergeSummaryObjects" id="apidoc.element.istanbul.utils.mergeSummaryObjects">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>mergeSummaryObjects
@@ -4760,9 +4760,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.removeDerivedInfo" id="apidoc.element.istanbul.utils.removeDerivedInfo">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>removeDerivedInfo
@@ -4777,9 +4777,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.summarizeCoverage" id="apidoc.element.istanbul.utils.summarizeCoverage">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>summarizeCoverage
@@ -4796,9 +4796,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.summarizeFileCoverage" id="apidoc.element.istanbul.utils.summarizeFileCoverage">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>summarizeFileCoverage
@@ -4818,9 +4818,9 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.istanbul.utils.toYUICoverage" id="apidoc.element.istanbul.utils.toYUICoverage">
         function <span class="apidocSignatureSpan">istanbul.utils.</span>toYUICoverage
@@ -4868,8 +4868,8 @@ function runToCompletion(args) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
