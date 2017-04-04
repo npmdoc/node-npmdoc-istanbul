@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gotwarlost/istanbul#readme"
-
-    >istanbul (v0.4.5)</a>
+    <a href="https://github.com/gotwarlost/istanbul#readme">istanbul (v0.4.5)</a>
 </h1>
 <h4>Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests </h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.istanbul">module istanbul</a><ol>
 
@@ -1347,13 +1340,13 @@
     this.store = options.store || new MemoryStore();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    &#x27;filename.js&#x27;);
+    'filename.js');
 ```
 
 #### Generate reports given a bunch of coverage JSON objects
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.<span class="apidocCodeKeywordSpan">Collector</span>(),
     reporter = new istanbul.Reporter(),
     sync = false;
@@ -1361,7 +1354,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.add(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
+reporter.add('text');
 ...</pre></li>
     </ul>
 
@@ -1392,8 +1385,8 @@ reporter.add(&#x27;text&#x27;);
     Writer.call(this);
     var that = this;
     this.delegate = sync ? new SyncFileWriter() : new AsyncFileWriter();
-    this.delegate.on(&#x27;error&#x27;, function (err) { that.emit(&#x27;error&#x27;, err); });
-    this.delegate.on(&#x27;done&#x27;, function () { that.emit(&#x27;done&#x27;); });
+    this.delegate.on('error', function (err) { that.emit('error', err); });
+    this.delegate.on('done', function () { that.emit('done'); });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1411,7 +1404,7 @@ reporter.add(&#x27;text&#x27;);
     this.opts = options || {
         debug: false,
         walkDebug: false,
-        coverageVariable: &#x27;__coverage__&#x27;,
+        coverageVariable: '__coverage__',
         codeGenerationOptions: undefined,
         noAutoWrap: false,
         noCompact: false,
@@ -1420,10 +1413,10 @@ reporter.add(&#x27;text&#x27;);
         esModules: false
     };
 
-    if (this.opts.esModules &#x26;&#x26; !this.opts.noAutoWrap) {
+    if (this.opts.esModules &amp;&amp; !this.opts.noAutoWrap) {
         this.opts.noAutoWrap = true;
         if (this.opts.debug) {
-            console.log(&#x27;Setting noAutoWrap to true as required by esModules&#x27;);
+            console.log('Setting noAutoWrap to true as required by esModules');
         }
     }
 
@@ -1457,7 +1450,7 @@ reporter.add(&#x27;text&#x27;);
     }, this.extractCurrentHint, this, this.opts.walkDebug);
 
     //unit testing purposes only
-    if (this.opts.backdoor &#x26;&#x26; this.opts.backdoor.omitTrackerSuffix) {
+    if (this.opts.backdoor &amp;&amp; this.opts.backdoor.omitTrackerSuffix) {
         this.omitTrackerSuffix = true;
     }
 }</pre></li>
@@ -1468,11 +1461,11 @@ All the features of istanbul can be accessed as a library.
 #### Instrument code
 
 ```javascript
-    var istanbul = require(&#x27;istanbul&#x27;);
+    var istanbul = require('istanbul');
     var instrumenter = new istanbul.<span class="apidocCodeKeywordSpan">Instrumenter</span>();
 
-    var generatedCode = instrumenter.instrumentSync(&#x27;function meaningOfLife() { return 42; }&#x27;,
-        &#x27;filename.js&#x27;);
+    var generatedCode = instrumenter.instrumentSync('function meaningOfLife() { return 42; }',
+        'filename.js');
 ```
 
 #### Generate reports given a bunch of coverage JSON objects
@@ -1514,7 +1507,7 @@ All the features of istanbul can be accessed as a library.
 #### Generate reports given a bunch of coverage JSON objects
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.Collector(),
     reporter = new istanbul.<span class="apidocCodeKeywordSpan">Reporter</span>(),
     sync = false;
@@ -1522,8 +1515,8 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.add(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
-reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+reporter.add('text');
+reporter.addAll([ 'lcov', 'clover' ]);
 ...</pre></li>
     </ul>
 
@@ -1591,21 +1584,21 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
 
         if (YMain.YUI) {
             YUI = YMain.YUI;
-            loaderFn = YUI.Env &#x26;&#x26; YUI.Env.mods &#x26;&#x26; YUI.Env.mods[&#x27;loader-base&#x27;] ? YUI.Env.mods[&#x27;loader-base&#x27;].fn : null;
+            loaderFn = YUI.Env &amp;&amp; YUI.Env.mods &amp;&amp; YUI.Env.mods['loader-base'] ? YUI.Env.mods['loader-base'].fn : null;
             if (!loaderFn) { return; }
-            if (verbose) { console.log(&#x27;Applying YUI load post-hook&#x27;); }
-            YUI.Env.mods[&#x27;loader-base&#x27;].fn = function (Y) {
+            if (verbose) { console.log('Applying YUI load post-hook'); }
+            YUI.Env.mods['loader-base'].fn = function (Y) {
                 loaderFn.call(null, Y);
                 origGet = Y.Get._exec;
                 Y.Get._exec = function (data, url, cb) {
                     if (matchFn(url) || matchFn(path.resolve(url))) { //allow for relative paths as well
                         if (verbose) {
-                            console.log(&#x27;Transforming [&#x27; + url + &#x27;]&#x27;);
+                            console.log('Transforming [' + url + ']');
                         }
                         try {
                             data = transformFn(data, url);
                         } catch (ex) {
-                            console.error(&#x27;Error transforming: &#x27; + url + &#x27; return original code&#x27;);
+                            console.error('Error transforming: ' + url + ' return original code');
                             console.error(ex.message || ex);
                             if (ex.stack) { console.error(ex.stack); }
                         }
@@ -1631,7 +1624,7 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function matcherFor(options, callback) {
 
-    if (!callback &#x26;&#x26; typeof options === &#x27;function&#x27;) {
+    if (!callback &amp;&amp; typeof options === 'function') {
         callback = options;
         options = null;
     }
@@ -1700,13 +1693,13 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
     this.store = options.store || new MemoryStore();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    &#x27;filename.js&#x27;);
+    'filename.js');
 ```
 
 #### Generate reports given a bunch of coverage JSON objects
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.<span class="apidocCodeKeywordSpan">Collector</span>(),
     reporter = new istanbul.Reporter(),
     sync = false;
@@ -1714,7 +1707,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.add(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
+reporter.add('text');
 ...</pre></li>
     </ul>
 
@@ -1746,7 +1739,7 @@ reporter.add(&#x27;text&#x27;);
     <li>example usage<pre class="apidocCodePre">...
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.Collector(),
     reporter = new istanbul.Reporter(),
     sync = false;
@@ -1754,10 +1747,10 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.<span class="apidocCodeKeywordSpan">add</span>(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
-reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+reporter.add('text');
+reporter.addAll([ 'lcov', 'clover' ]);
 reporter.write(collector, sync, function () {
-    console.log(&#x27;All reports generated&#x27;);
+    console.log('All reports generated');
 });
 ...</pre></li>
     </ul>
@@ -1862,7 +1855,7 @@ reporter.write(collector, sync, function () {
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">println = function (str) { this.write(str + &#x27;\n&#x27;); }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">println = function (str) { this.write(str + '\n'); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -1876,7 +1869,7 @@ reporter.write(collector, sync, function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">write = function () {
-    throw new Error(&#x27;write: must be overridden&#x27;);
+    throw new Error('write: must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
         sync = false;
@@ -1884,10 +1877,10 @@ reporter.write(collector, sync, function () {
     collector.add(obj1);
     collector.add(obj2); //etc.
 
-    reporter.add(&#x27;text&#x27;);
-    reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+    reporter.add('text');
+    reporter.addAll([ 'lcov', 'clover' ]);
     reporter.<span class="apidocCodeKeywordSpan">write</span>(collector, sync, function () {
-        console.log(&#x27;All reports generated&#x27;);
+        console.log('All reports generated');
     });
 ```
 
@@ -1913,8 +1906,8 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     Writer.call(this);
     var that = this;
     this.delegate = sync ? new SyncFileWriter() : new AsyncFileWriter();
-    this.delegate.on(&#x27;error&#x27;, function (err) { that.emit(&#x27;error&#x27;, err); });
-    this.delegate.on(&#x27;done&#x27;, function () { that.emit(&#x27;done&#x27;); });
+    this.delegate.on('error', function (err) { that.emit('error', err); });
+    this.delegate.on('done', function () { that.emit('done'); });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2003,7 +1996,7 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     this.opts = options || {
         debug: false,
         walkDebug: false,
-        coverageVariable: &#x27;__coverage__&#x27;,
+        coverageVariable: '__coverage__',
         codeGenerationOptions: undefined,
         noAutoWrap: false,
         noCompact: false,
@@ -2012,10 +2005,10 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
         esModules: false
     };
 
-    if (this.opts.esModules &#x26;&#x26; !this.opts.noAutoWrap) {
+    if (this.opts.esModules &amp;&amp; !this.opts.noAutoWrap) {
         this.opts.noAutoWrap = true;
         if (this.opts.debug) {
-            console.log(&#x27;Setting noAutoWrap to true as required by esModules&#x27;);
+            console.log('Setting noAutoWrap to true as required by esModules');
         }
     }
 
@@ -2049,7 +2042,7 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     }, this.extractCurrentHint, this, this.opts.walkDebug);
 
     //unit testing purposes only
-    if (this.opts.backdoor &#x26;&#x26; this.opts.backdoor.omitTrackerSuffix) {
+    if (this.opts.backdoor &amp;&amp; this.opts.backdoor.omitTrackerSuffix) {
         this.omitTrackerSuffix = true;
     }
 }</pre></li>
@@ -2060,11 +2053,11 @@ All the features of istanbul can be accessed as a library.
 #### Instrument code
 
 ```javascript
-    var istanbul = require(&#x27;istanbul&#x27;);
+    var istanbul = require('istanbul');
     var instrumenter = new istanbul.<span class="apidocCodeKeywordSpan">Instrumenter</span>();
 
-    var generatedCode = instrumenter.instrumentSync(&#x27;function meaningOfLife() { return 42; }&#x27;,
-        &#x27;filename.js&#x27;);
+    var generatedCode = instrumenter.instrumentSync('function meaningOfLife() { return 42; }',
+        'filename.js');
 ```
 
 #### Generate reports given a bunch of coverage JSON objects
@@ -2111,7 +2104,7 @@ All the features of istanbul can be accessed as a library.
     var ret = astgen.postIncrement(
         astgen.subscript(
             astgen.subscript(
-                astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable(&#x27;b&#x27;)),
+                astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable('b')),
                 astgen.stringLiteral(varName)
             ),
             astgen.numericLiteral(branchIndex)
@@ -2155,7 +2148,7 @@ All the features of istanbul can be accessed as a library.
         ignoring = !!this.currentState.ignoring;
     this.currentState.branch += 1;
     bName = this.currentState.branch;
-    for (i = 0; i &#x3c; pathLocations.length; i += 1) {
+    for (i = 0; i &lt; pathLocations.length; i += 1) {
         pathLocations[i].skip = pathLocations[i].skip || ignoring || undefined;
         locations.push(pathLocations[i]);
         paths.push(0);
@@ -2177,7 +2170,7 @@ All the features of istanbul can be accessed as a library.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">conditionalBranchInjector = function (node, walker) {
-    var bName = this.branchName(&#x27;cond-expr&#x27;, walker.startLineForNode(node), this.locationsForNodes([ node.consequent, node.alternate
+    var bName = this.branchName('cond-expr', walker.startLineForNode(node), this.locationsForNodes([ node.consequent, node.alternate
  ])),
         ast1 = this.branchIncrementExprAst(bName, 0),
         ast2 = this.branchIncrementExprAst(bName, 1);
@@ -2201,11 +2194,11 @@ All the features of istanbul can be accessed as a library.
     <ul>
     <li>description and source-code<pre class="apidocCodePre">convertToBlock = function (node) {
     if (!node) {
-        return { type: &#x27;BlockStatement&#x27;, body: [] };
-    } else if (node.type === &#x27;BlockStatement&#x27;) {
+        return { type: 'BlockStatement', body: [] };
+    } else if (node.type === 'BlockStatement') {
         return node;
     } else {
-        return { type: &#x27;BlockStatement&#x27;, body: [ node ] };
+        return { type: 'BlockStatement', body: [ node ] };
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2225,13 +2218,13 @@ All the features of istanbul can be accessed as a library.
 
     if ( !node.declaration || !node.declaration.declarations ) { return; }
 
-    this.maybeSkipNode(node, &#x27;next&#x27;);
+    this.maybeSkipNode(node, 'next');
 
     sName = this.statementName(node.declaration.loc);
     incrStatementCount = astgen.statement(
         astgen.postIncrement(
             astgen.subscript(
-                astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable(&#x27;s&#x27;)),
+                astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable('s')),
                 astgen.stringLiteral(sName)
             )
         )
@@ -2257,21 +2250,21 @@ All the features of istanbul can be accessed as a library.
         blockBody = body.body,
         popped;
 
-    this.maybeSkipNode(node, &#x27;next&#x27;);
+    this.maybeSkipNode(node, 'next');
 
     id = this.functionName(node, walker.startLineForNode(node), {
         start: node.loc.start,
         end: { line: node.body.loc.start.line, column: node.body.loc.start.column }
     });
 
-    if (blockBody.length &#x3e; 0 &#x26;&#x26; this.isUseStrictExpression(blockBody[0])) {
+    if (blockBody.length &gt; 0 &amp;&amp; this.isUseStrictExpression(blockBody[0])) {
         popped = blockBody.shift();
     }
     blockBody.unshift(
         astgen.statement(
             astgen.postIncrement(
                 astgen.subscript(
-                    astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable(&#x27;f&#x27;)),
+                    astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable('f')),
                     astgen.stringLiteral(id)
                 )
             )
@@ -2314,14 +2307,14 @@ All the features of istanbul can be accessed as a library.
         parent,
         grandParent;
 
-    this.maybeSkipNode(node, &#x27;next&#x27;);
+    this.maybeSkipNode(node, 'next');
 
     if (this.isUseStrictExpression(node)) {
         grandParent = walker.ancestor(2);
 <span class="apidocCodeCommentSpan">        /* istanbul ignore else: difficult to test */
 </span>        if (grandParent) {
             if ((grandParent.node.type === SYNTAX.FunctionExpression.name ||
-                grandParent.node.type === SYNTAX.FunctionDeclaration.name)  &#x26;&#x26;
+                grandParent.node.type === SYNTAX.FunctionDeclaration.name)  &amp;&amp;
                 walker.parent().node.body[0] === node) {
                 return;
             }
@@ -2329,12 +2322,12 @@ All the features of istanbul can be accessed as a library.
     }
 
     if (node.type === SYNTAX.FunctionDeclaration.name) {
-        // Called for the side-effect of setting the function&#x27;s statement count to 1.
+        // Called for the side-effect of setting the function's statement count to 1.
         this.statementName(node.loc, 1);
     } else {
         // We let `coverExport` handle ExportNamedDeclarations.
         parent = walker.parent();
-        if (parent &#x26;&#x26; parent.node.type === SYNTAX.ExportNamedDeclaration.name) {
+        if (parent &amp;&amp; parent.node.type === SYNTAX.ExportNamedDeclaration.name) {
             return;
         }
 
@@ -2343,7 +2336,7 @@ All the features of istanbul can be accessed as a library.
         incrStatementCount = astgen.statement(
             astgen.postIncrement(
                 astgen.subscript(
-                    astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable(&#x27;s&#x27;)),
+                    astgen.dot(astgen.variable(this.currentState.trackerVar), astgen.variable('s')),
                     astgen.stringLiteral(sName)
                 )
             )
@@ -2386,9 +2379,9 @@ All the features of istanbul can be accessed as a library.
         nodeStart = node.range[0],
         hint;
     this.currentState.currentHint = null;
-    while (i &#x3c; hints.length) {
+    while (i &lt; hints.length) {
         hint = hints[i];
-        if (hint.end &#x3c; nodeStart) {
+        if (hint.end &lt; nodeStart) {
             this.currentState.currentHint = hint;
             this.currentState.lastHintPosition = i;
             i += 1;
@@ -2414,13 +2407,13 @@ All the features of istanbul can be accessed as a library.
         i,
         comment,
         groups;
-    if (!(comments &#x26;&#x26; isArray(comments))) {
+    if (!(comments &amp;&amp; isArray(comments))) {
         return ret;
     }
-    for (i = 0; i &#x3c; comments.length; i += 1) {
+    for (i = 0; i &lt; comments.length; i += 1) {
         comment = comments[i];
 <span class="apidocCodeCommentSpan">        /* istanbul ignore else: paranoid check */
-</span>        if (comment &#x26;&#x26; comment.value &#x26;&#x26; comment.range &#x26;&#x26; isArray(comment.range)) {
+</span>        if (comment &amp;&amp; comment.value &amp;&amp; comment.range &amp;&amp; isArray(comment.range)) {
             groups = String(comment.value).match(COMMENT_RE);
             if (groups) {
                 ret.push({ type: groups[1], start: comment.range[0], end: comment.range[1] });
@@ -2443,8 +2436,8 @@ All the features of istanbul can be accessed as a library.
     <ul>
     <li>description and source-code<pre class="apidocCodePre">findLeaves = function (node, accumulator, parent, property) {
     if (node.type === SYNTAX.LogicalExpression.name) {
-        this.findLeaves(node.left, accumulator, node, &#x27;left&#x27;);
-        this.findLeaves(node.right, accumulator, node, &#x27;right&#x27;);
+        this.findLeaves(node.left, accumulator, node, 'left');
+        this.findLeaves(node.right, accumulator, node, 'right');
     } else {
         accumulator.push({ node: node, parent: parent, property: property });
     }
@@ -2491,7 +2484,7 @@ All the features of istanbul can be accessed as a library.
         /* istanbul ignore else: has own property */
         if (obj.hasOwnProperty(k)) {
             locations = obj[k].locations;
-            for (i = 0; i &#x3c; locations.length; i += 1) {
+            for (i = 0; i &lt; locations.length; i += 1) {
                 fixer(locations[i]);
             }
         }
@@ -2513,7 +2506,7 @@ All the features of istanbul can be accessed as a library.
     this.currentState.func += 1;
     var id = this.currentState.func,
         ignoring = !!this.currentState.ignoring,
-        name = node.id ? node.id.name : &#x27;(anonymous_&#x27; + id + &#x27;)&#x27;,
+        name = node.id ? node.id.name : '(anonymous_' + id + ')',
         clone = function (attr) {
             var obj = location[attr] || /* istanbul ignore next */ {};
             return { line: obj.line, column: obj.column };
@@ -2521,8 +2514,8 @@ All the features of istanbul can be accessed as a library.
     this.coverState.fnMap[id] = {
         name: name, line: line,
         loc: {
-            start: clone(&#x27;start&#x27;),
-            end: clone(&#x27;end&#x27;)
+            start: clone('start'),
+            end: clone('end')
         },
         skip: ignoring || undefined
     };
@@ -2542,11 +2535,11 @@ All the features of istanbul can be accessed as a library.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getPreamble = function (sourceCode, emitUseStrict) {
-    var varName = this.opts.coverageVariable || &#x27;__coverage__&#x27;,
-        file = this.coverState.path.replace(/\\/g, &#x27;\\\\&#x27;),
+    var varName = this.opts.coverageVariable || '__coverage__',
+        file = this.coverState.path.replace(/\\/g, '\\\\'),
         tracker = this.currentState.trackerVar,
         coverState,
-        strictLine = emitUseStrict ? &#x27;&#x22;use strict&#x22;;&#x27; : &#x27;&#x27;,
+        strictLine = emitUseStrict ? '"use strict";' : '',
         // return replacements using the function to ensure that the replacement is
         // treated like a dumb string and not as a string with RE replacement patterns
         replacer = function (s) {
@@ -2561,15 +2554,15 @@ All the features of istanbul can be accessed as a library.
     }
     coverState = this.opts.debug ? JSON.stringify(this.coverState, undefined, 4) : JSON.stringify(this.coverState);
     code = [
-        &#x22;%STRICT%&#x22;,
-        &#x22;var %VAR% = (Function(&#x27;return this&#x27;))();&#x22;,
-        &#x22;if (!%VAR%.%GLOBAL%) { %VAR%.%GLOBAL% = {}; }&#x22;,
-        &#x22;%VAR% = %VAR%.%GLOBAL%;&#x22;,
-        &#x22;if (!(%VAR%[&#x27;%FILE%&#x27;])) {&#x22;,
-        &#x22;   %VAR%[&#x27;%FILE%&#x27;] = %OBJECT%;&#x22;,
-        &#x22;}&#x22;,
-        &#x22;%VAR% = %VAR%[&#x27;%FILE%&#x27;];&#x22;
-    ].join(&#x22;\n&#x22;)
+        "%STRICT%",
+        "var %VAR% = (Function('return this'))();",
+        "if (!%VAR%.%GLOBAL%) { %VAR%.%GLOBAL% = {}; }",
+        "%VAR% = %VAR%.%GLOBAL%;",
+        "if (!(%VAR%['%FILE%'])) {",
+        "   %VAR%['%FILE%'] = %OBJECT%;",
+        "}",
+        "%VAR% = %VAR%['%FILE%'];"
+    ].join("\n")
         .replace(/%STRICT%/g, replacer(strictLine))
         .replace(/%VAR%/g, replacer(tracker))
         .replace(/%GLOBAL%/g, replacer(varName))
@@ -2608,12 +2601,12 @@ All the features of istanbul can be accessed as a library.
     <li>description and source-code<pre class="apidocCodePre">ifBranchInjector = function (node, walker) {
     var alreadyIgnoring = !!this.currentState.ignoring,
         hint = this.currentState.currentHint,
-        ignoreThen = !alreadyIgnoring &#x26;&#x26; hint &#x26;&#x26; hint.type === &#x27;if&#x27;,
-        ignoreElse = !alreadyIgnoring &#x26;&#x26; hint &#x26;&#x26; hint.type === &#x27;else&#x27;,
+        ignoreThen = !alreadyIgnoring &amp;&amp; hint &amp;&amp; hint.type === 'if',
+        ignoreElse = !alreadyIgnoring &amp;&amp; hint &amp;&amp; hint.type === 'else',
         line = node.loc.start.line,
         col = node.loc.start.column,
         makeLoc = function () { return  { line: line, column: col }; },
-        bName = this.branchName(&#x27;if&#x27;, walker.startLineForNode(node), [
+        bName = this.branchName('if', walker.startLineForNode(node), [
             { start: makeLoc(), end: makeLoc(), skip: ignoreThen || undefined },
             { start: makeLoc(), end: makeLoc(), skip: ignoreElse || undefined }
         ]),
@@ -2639,7 +2632,7 @@ All the features of istanbul can be accessed as a library.
     <ul>
     <li>description and source-code<pre class="apidocCodePre">instrument = function (code, filename, callback) {
 
-    if (!callback &#x26;&#x26; typeof filename === &#x27;function&#x27;) {
+    if (!callback &amp;&amp; typeof filename === 'function') {
         callback = filename;
         filename = null;
     }
@@ -2668,7 +2661,7 @@ All the features of istanbul can be accessed as a library.
         preamble,
         lineCount,
         i;
-    filename = filename || String(new Date().getTime()) + &#x27;.js&#x27;;
+    filename = filename || String(new Date().getTime()) + '.js';
     this.sourceMap = null;
     this.coverState = {
         path: filename,
@@ -2690,7 +2683,7 @@ All the features of istanbul can be accessed as a library.
         lastHintPosition: -1,
         ignoring: 0
     };
-    if (program.body &#x26;&#x26; program.body.length &#x3e; 0 &#x26;&#x26; this.isUseStrictExpression(program.body[0])) {
+    if (program.body &amp;&amp; program.body.length &gt; 0 &amp;&amp; this.isUseStrictExpression(program.body[0])) {
         //nuke it
         program.body.shift();
         //and add it back at code generation time
@@ -2702,19 +2695,19 @@ All the features of istanbul can be accessed as a library.
     //console.log(JSON.stringify(program, undefined, 2));
 
     generated = ESPGEN.generate(program, codegenOptions);
-    preamble = this.getPreamble(originalCode || &#x27;&#x27;, usingStrict);
+    preamble = this.getPreamble(originalCode || '', usingStrict);
 
-    if (generated.map &#x26;&#x26; generated.code) {
+    if (generated.map &amp;&amp; generated.code) {
         lineCount = preamble.split(/\r\n|\r|\n/).length;
         // offset all the generated line numbers by the number of lines in the preamble
-        for (i = 0; i &#x3c; generated.map._mappings._array.length; i += 1) {
+        for (i = 0; i &lt; generated.map._mappings._array.length; i += 1) {
             generated.map._mappings._array[i].generatedLine += lineCount;
         }
         this.sourceMap = generated.map;
         generated = generated.code;
     }
 
-    return preamble + &#x27;\n&#x27; + generated + &#x27;\n&#x27;;
+    return preamble + '\n' + generated + '\n';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2732,9 +2725,9 @@ All the features of istanbul can be accessed as a library.
     var program;
 
     //protect from users accidentally passing in a Buffer object instead
-    if (typeof code !== &#x27;string&#x27;) { throw new Error(&#x27;Code must be string&#x27;); }
-    if (code.charAt(0) === &#x27;#&#x27;) { //shebang, &#x27;comment&#x27; it out, won&#x27;t affect syntax tree locations for things we care about
-        code = &#x27;//&#x27; + code;
+    if (typeof code !== 'string') { throw new Error('Code must be string'); }
+    if (code.charAt(0) === '#') { //shebang, 'comment' it out, won't affect syntax tree locations for things we care about
+        code = '//' + code;
     }
     if (!this.opts.noAutoWrap) {
         code = LEADER_WRAP + code + TRAILER_WRAP;
@@ -2745,10 +2738,10 @@ All the features of istanbul can be accessed as a library.
             range: true,
             tokens: this.opts.preserveComments,
             comment: true,
-            sourceType: this.opts.esModules ? &#x27;module&#x27; : &#x27;script&#x27;
+            sourceType: this.opts.esModules ? 'module' : 'script'
         });
     } catch (e) {
-        console.log(&#x27;Failed to parse file: &#x27; + filename);
+        console.log('Failed to parse file: ' + filename);
         throw e;
     }
     if (this.opts.preserveComments) {
@@ -2768,18 +2761,18 @@ All the features of istanbul can be accessed as a library.
 #### Instrument code
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;);
+var istanbul = require('istanbul');
 var instrumenter = new istanbul.Instrumenter();
 
-var generatedCode = instrumenter.<span class="apidocCodeKeywordSpan">instrumentSync</span>(&#x27;function meaningOfLife() { return
- 42; }&#x27;,
-    &#x27;filename.js&#x27;);
+var generatedCode = instrumenter.<span class="apidocCodeKeywordSpan">instrumentSync</span>('function meaningOfLife() { return
+ 42; }',
+    'filename.js');
 ```
 
 #### Generate reports given a bunch of coverage JSON objects
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
 ...</pre></li>
     </ul>
 
@@ -2793,9 +2786,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isUseStrictExpression = function (node) {
-    return node &#x26;&#x26; node.type === SYNTAX.ExpressionStatement.name &#x26;&#x26;
-        node.expression  &#x26;&#x26; node.expression.type === SYNTAX.Literal.name &#x26;&#x26;
-        node.expression.value === &#x27;use strict&#x27;;
+    return node &amp;&amp; node.type === SYNTAX.ExpressionStatement.name &amp;&amp;
+        node.expression  &amp;&amp; node.expression.type === SYNTAX.Literal.name &amp;&amp;
+        node.expression.value === 'use strict';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2842,7 +2835,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     <li>description and source-code<pre class="apidocCodePre">locationsForNodes = function (nodes) {
     var ret = [],
         i;
-    for (i = 0; i &#x3c; nodes.length; i += 1) {
+    for (i = 0; i &lt; nodes.length; i += 1) {
         ret.push(nodes[i].loc);
     }
     return ret;
@@ -2866,19 +2859,19 @@ var istanbul = require(&#x27;istanbul&#x27;),
         tuple,
         i;
 
-    this.maybeSkipNode(node, &#x27;next&#x27;);
+    this.maybeSkipNode(node, 'next');
 
-    if (parent &#x26;&#x26; parent.node.type === SYNTAX.LogicalExpression.name) {
+    if (parent &amp;&amp; parent.node.type === SYNTAX.LogicalExpression.name) {
         //already covered
         return;
     }
 
     this.findLeaves(node, leaves);
-    bName = this.branchName(&#x27;binary-expr&#x27;,
+    bName = this.branchName('binary-expr',
         walker.startLineForNode(node),
         this.locationsForNodes(leaves.map(function (item) { return item.node; }))
     );
-    for (i = 0; i &#x3c; leaves.length; i += 1) {
+    for (i = 0; i &lt; leaves.length; i += 1) {
         tuple = leaves[i];
         tuple.parent[tuple.property] = astgen.sequence(this.branchIncrementExprAst(bName, i), tuple.node);
         tuple.node.preprocessor = this.maybeAddSkip(this.branchLocationFor(bName, i));
@@ -2915,7 +2908,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     return function (node) {
         var alreadyIgnoring = !!this.currentState.ignoring,
             hint = this.currentState.currentHint,
-            ignoreThis = !alreadyIgnoring &#x26;&#x26; hint &#x26;&#x26; hint.type === &#x27;next&#x27;;
+            ignoreThis = !alreadyIgnoring &amp;&amp; hint &amp;&amp; hint.type === 'next';
         if (ignoreThis) {
             this.startIgnore();
             node.postprocessor = this.endIgnore;
@@ -2941,7 +2934,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     var props = node.properties,
         i,
         child;
-    for (i = 0; i &#x3c; props.length; i += 1) {
+    for (i = 0; i &lt; props.length; i += 1) {
         child = props[i];
         if (!child.type) {
             child.type = SYNTAX.Property.name;
@@ -2963,7 +2956,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     <li>description and source-code<pre class="apidocCodePre">maybeSkipNode = function (node, type) {
     var alreadyIgnoring = !!this.currentState.ignoring,
         hint = this.currentState.currentHint,
-        ignoreThis = !alreadyIgnoring &#x26;&#x26; hint &#x26;&#x26; hint.type === type;
+        ignoreThis = !alreadyIgnoring &amp;&amp; hint &amp;&amp; hint.type === type;
 
     if (ignoreThis) {
         this.startIgnore();
@@ -2989,7 +2982,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     // convert handlers array to single handler attribute
     // containing its first element
 <span class="apidocCodeCommentSpan">    /* istanbul ignore next */
-</span>    if (!node.handler &#x26;&#x26; node.handlers) {
+</span>    if (!node.handler &amp;&amp; node.handlers) {
         node.handler = node.handlers[0];
     }
 }</pre></li>
@@ -3098,11 +3091,11 @@ var istanbul = require(&#x27;istanbul&#x27;),
         bName,
         i;
 
-    if (!(cases &#x26;&#x26; cases.length &#x3e; 0)) {
+    if (!(cases &amp;&amp; cases.length &gt; 0)) {
         return;
     }
-    bName = this.branchName(&#x27;switch&#x27;, walker.startLineForNode(node), this.locationsForNodes(cases));
-    for (i = 0; i &#x3c; cases.length; i += 1) {
+    bName = this.branchName('switch', walker.startLineForNode(node), this.locationsForNodes(cases));
+    for (i = 0; i &lt; cases.length; i += 1) {
         cases[i].branchLocation = this.branchLocationFor(bName, i);
         cases[i].consequent.unshift(astgen.statement(this.branchIncrementExprAst(bName, i)));
     }
@@ -3122,7 +3115,7 @@ var istanbul = require(&#x27;istanbul&#x27;),
     <li>description and source-code<pre class="apidocCodePre">switchCaseInjector = function (node) {
     var location = node.branchLocation;
     delete node.branchLocation;
-    if (this.maybeSkipNode(node, &#x27;next&#x27;)) {
+    if (this.maybeSkipNode(node, 'next')) {
         location.skip = true;
     }
 }</pre></li>
@@ -3204,9 +3197,9 @@ var istanbul = require(&#x27;istanbul&#x27;),
  Copyright (c) 2012, Yahoo! Inc.  All rights reserved.
  Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
-var Store = require(&#x27;./store&#x27;),
-    Report = require(&#x27;./report&#x27;),
-    Command = require(&#x27;./command&#x27;);
+var Store = require('./store'),
+    Report = require('./report'),
+    Command = require('./command');
 
 Store.<span class="apidocCodeKeywordSpan">loadAll</span>();
 Report.loadAll();
@@ -3289,7 +3282,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">synopsis = function () {
-    throw new Error(&#x27;synopsis must be overridden&#x27;);
+    throw new Error('synopsis must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3304,7 +3297,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeReport = function () {
-    throw new Error(&#x27;writeReport: must be overridden&#x27;);
+    throw new Error('writeReport: must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3334,7 +3327,7 @@ Command.loadAll();
 #### Generate reports given a bunch of coverage JSON objects
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.Collector(),
     reporter = new istanbul.<span class="apidocCodeKeywordSpan">Reporter</span>(),
     sync = false;
@@ -3342,8 +3335,8 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.add(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
-reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+reporter.add('text');
+reporter.addAll([ 'lcov', 'clover' ]);
 ...</pre></li>
     </ul>
 
@@ -3373,13 +3366,13 @@ reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
     try {
         this.reports[fmt] = Report.create(fmt, rptConfig);
     } catch (ex) {
-        throw inputError.create(&#x27;Invalid report format [&#x27; + fmt + &#x27;]&#x27;);
+        throw inputError.create('Invalid report format [' + fmt + ']');
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ```javascript
-var istanbul = require(&#x27;istanbul&#x27;),
+var istanbul = require('istanbul'),
     collector = new istanbul.Collector(),
     reporter = new istanbul.Reporter(),
     sync = false;
@@ -3387,10 +3380,10 @@ var istanbul = require(&#x27;istanbul&#x27;),
 collector.<span class="apidocCodeKeywordSpan">add</span>(obj1);
 collector.add(obj2); //etc.
 
-reporter.add(&#x27;text&#x27;);
-reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+reporter.add('text');
+reporter.addAll([ 'lcov', 'clover' ]);
 reporter.write(collector, sync, function () {
-    console.log(&#x27;All reports generated&#x27;);
+    console.log('All reports generated');
 });
 ...</pre></li>
     </ul>
@@ -3417,10 +3410,10 @@ reporter.write(collector, sync, function () {
     collector.add(obj1);
     collector.add(obj2); //etc.
 
-    reporter.add(&#x27;text&#x27;);
-    reporter.<span class="apidocCodeKeywordSpan">addAll</span>([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+    reporter.add('text');
+    reporter.<span class="apidocCodeKeywordSpan">addAll</span>([ 'lcov', 'clover' ]);
     reporter.write(collector, sync, function () {
-        console.log(&#x27;All reports generated&#x27;);
+        console.log('All reports generated');
     });
 ```
 
@@ -3465,9 +3458,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     Object.keys(reports).forEach(function (name) {
         var report = reports[name];
         if (verbose) {
-            console.error(&#x27;Write report: &#x27; + name);
+            console.error('Write report: ' + name);
         }
-        report.on(&#x27;done&#x27;, handler);
+        report.on('done', handler);
         report.writeReport(collector, sync);
     });
 }</pre></li>
@@ -3477,10 +3470,10 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
     collector.add(obj1);
     collector.add(obj2); //etc.
 
-    reporter.add(&#x27;text&#x27;);
-    reporter.addAll([ &#x27;lcov&#x27;, &#x27;clover&#x27; ]);
+    reporter.add('text');
+    reporter.addAll([ 'lcov', 'clover' ]);
     reporter.<span class="apidocCodeKeywordSpan">write</span>(collector, sync, function () {
-        console.log(&#x27;All reports generated&#x27;);
+        console.log('All reports generated');
     });
 ```
 
@@ -3546,9 +3539,9 @@ For the gory details consult the [public API](http://gotwarlost.github.com/istan
  Copyright (c) 2012, Yahoo! Inc.  All rights reserved.
  Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
-var Store = require(&#x27;./store&#x27;),
-    Report = require(&#x27;./report&#x27;),
-    Command = require(&#x27;./command&#x27;);
+var Store = require('./store'),
+    Report = require('./report'),
+    Command = require('./command');
 
 Store.<span class="apidocCodeKeywordSpan">loadAll</span>();
 Report.loadAll();
@@ -3613,7 +3606,7 @@ Command.loadAll();
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">get = function () { throw new Error(&#x22;get: must be overridden&#x22;); }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">get = function () { throw new Error("get: must be overridden"); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -3641,7 +3634,7 @@ Command.loadAll();
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">hasKey = function () { throw new Error(&#x22;hasKey: must be overridden&#x22;); }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">hasKey = function () { throw new Error("hasKey: must be overridden"); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -3654,7 +3647,7 @@ Command.loadAll();
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">keys = function () { throw new Error(&#x22;keys: must be overridden&#x22;); }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">keys = function () { throw new Error("keys: must be overridden"); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -3667,7 +3660,7 @@ Command.loadAll();
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">set = function () { throw new Error(&#x22;set: must be overridden&#x22;); }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">set = function () { throw new Error("set: must be overridden"); }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -3792,7 +3785,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">copyFile = function () {
-    throw new Error(&#x27;copyFile: must be overridden&#x27;);
+    throw new Error('copyFile: must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3807,7 +3800,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">done = function () {
-    throw new Error(&#x27;done: must be overridden&#x27;);
+    throw new Error('done: must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3822,7 +3815,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeFile = function () {
-    throw new Error(&#x27;writeFile: must be overridden&#x27;);
+    throw new Error('writeFile: must be overridden');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3845,30 +3838,30 @@ Command.loadAll();
     var ret = {
         verbose: false,
         instrumentation: {
-            root: &#x27;.&#x27;,
-            extensions: [&#x27;.js&#x27;],
-            &#x27;default-excludes&#x27;: true,
+            root: '.',
+            extensions: ['.js'],
+            'default-excludes': true,
             excludes: [],
-            &#x27;embed-source&#x27;: false,
-            variable: &#x27;__coverage__&#x27;,
+            'embed-source': false,
+            variable: '__coverage__',
             compact: true,
-            &#x27;preserve-comments&#x27;: false,
-            &#x27;complete-copy&#x27;: false,
-            &#x27;save-baseline&#x27;: false,
-            &#x27;baseline-file&#x27;: &#x27;./coverage/coverage-baseline.json&#x27;,
-            &#x27;include-all-sources&#x27;: false,
-            &#x27;include-pid&#x27;: false,
-            &#x27;es-modules&#x27;: false
+            'preserve-comments': false,
+            'complete-copy': false,
+            'save-baseline': false,
+            'baseline-file': './coverage/coverage-baseline.json',
+            'include-all-sources': false,
+            'include-pid': false,
+            'es-modules': false
         },
         reporting: {
-            print: &#x27;summary&#x27;,
-            reports: [ &#x27;lcov&#x27; ],
-            dir: &#x27;./coverage&#x27;
+            print: 'summary',
+            reports: [ 'lcov' ],
+            dir: './coverage'
         },
         hooks: {
-            &#x27;hook-run-in-context&#x27;: false,
-            &#x27;post-require-hook&#x27;: null,
-            &#x27;handle-sigint&#x27;: false
+            'hook-run-in-context': false,
+            'post-require-hook': null,
+            'handle-sigint': false
         },
         check: {
             global: {
@@ -3888,10 +3881,10 @@ Command.loadAll();
         }
     };
     ret.reporting.watermarks = defaults.watermarks();
-    ret.reporting[&#x27;report-config&#x27;] = defaults.defaultReportConfig();
+    ret.reporting['report-config'] = defaults.defaultReportConfig();
 
     if (includeBackCompatAttrs) {
-        ret.instrumentation[&#x27;preload-sources&#x27;] = false;
+        ret.instrumentation['preload-sources'] = false;
     }
 
     return ret;
@@ -3909,12 +3902,12 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function loadFile(file, overrides) {
-    var defaultConfigFile = path.resolve(&#x27;.istanbul.yml&#x27;),
+    var defaultConfigFile = path.resolve('.istanbul.yml'),
         configObject;
 
     if (file) {
         if (!existsSync(file)) {
-            throw new Error(&#x27;Invalid configuration file specified:&#x27; + file);
+            throw new Error('Invalid configuration file specified:' + file);
         }
     } else {
         if (existsSync(defaultConfigFile)) {
@@ -3923,11 +3916,11 @@ Command.loadAll();
     }
 
     if (file) {
-        if (overrides &#x26;&#x26; overrides.verbose === true) {
-            console.error(&#x27;Loading config: &#x27; + file);
+        if (overrides &amp;&amp; overrides.verbose === true) {
+            console.error('Loading config: ' + file);
         }
         configObject = file.match(YML_PATTERN) ?
-            yaml.safeLoad(fs.readFileSync(file, &#x27;utf8&#x27;), { filename: file }) :
+            yaml.safeLoad(fs.readFileSync(file, 'utf8'), { filename: file }) :
             require(path.resolve(file));
     }
 
@@ -3989,17 +3982,17 @@ Command.loadAll();
     options = options || {};
     var extensions,
         fn = transformFn(matcher, transformer, options.verbose),
-        postLoadHook = options.postLoadHook &#x26;&#x26;
-            typeof options.postLoadHook === &#x27;function&#x27; ? options.postLoadHook : null;
+        postLoadHook = options.postLoadHook &amp;&amp;
+            typeof options.postLoadHook === 'function' ? options.postLoadHook : null;
 
-    extensions = options.extensions || [&#x27;.js&#x27;];
+    extensions = options.extensions || ['.js'];
 
     extensions.forEach(function(ext){
         if (!(ext in originalLoaders)) {
-            originalLoaders[ext] = Module._extensions[ext] || Module._extensions[&#x27;.js&#x27;];
+            originalLoaders[ext] = Module._extensions[ext] || Module._extensions['.js'];
         }
         Module._extensions[ext] = function (module, filename) {
-            var ret = fn(fs.readFileSync(filename, &#x27;utf8&#x27;), filename);
+            var ret = fn(fs.readFileSync(filename, 'utf8'), filename);
             if (ret.changed) {
                 module._compile(ret.code, filename);
             } else {
@@ -4091,7 +4084,7 @@ Command.loadAll();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function unloadRequireCache(matcher) {
-    if (matcher &#x26;&#x26; typeof require !== &#x27;undefined&#x27; &#x26;&#x26; require &#x26;&#x26; require.cache) {
+    if (matcher &amp;&amp; typeof require !== 'undefined' &amp;&amp; require &amp;&amp; require.cache) {
         Object.keys(require.cache).forEach(function (filename) {
             if (matcher(filename)) {
                 delete require.cache[filename];
@@ -4144,8 +4137,8 @@ Command.loadAll();
             var line = statementMap[st].start.line,
                 count = statements[st],
                 prevVal = lineMap[line];
-            if (count === 0 &#x26;&#x26; statementMap[st].skip) { count = 1; }
-            if (typeof prevVal === &#x27;undefined&#x27; || prevVal &#x3c; count) {
+            if (count === 0 &amp;&amp; statementMap[st].skip) { count = 1; }
+            if (typeof prevVal === 'undefined' || prevVal &lt; count) {
                 lineMap[line] = count;
             }
         });
@@ -4169,25 +4162,25 @@ Command.loadAll();
             total: 0,
             covered: 0,
             skipped: 0,
-            pct: &#x27;Unknown&#x27;
+            pct: 'Unknown'
         },
         statements: {
             total: 0,
             covered: 0,
             skipped: 0,
-            pct: &#x27;Unknown&#x27;
+            pct: 'Unknown'
         },
         functions: {
             total: 0,
             covered: 0,
             skipped: 0,
-            pct: &#x27;Unknown&#x27;
+            pct: 'Unknown'
         },
         branches: {
             total: 0,
             covered: 0,
             skipped: 0,
-            pct: &#x27;Unknown&#x27;
+            pct: 'Unknown'
         },
         linesCovered: {}
     };
@@ -4210,20 +4203,20 @@ Command.loadAll();
     var fileCoverage = JSON.parse(JSON.stringify(cov));
 
     [
-        {mapKey: &#x27;statementMap&#x27;, hitsKey: &#x27;s&#x27;},
-        {mapKey: &#x27;branchMap&#x27;, hitsKey: &#x27;b&#x27;},
-        {mapKey: &#x27;fnMap&#x27;, hitsKey: &#x27;f&#x27;}
+        {mapKey: 'statementMap', hitsKey: 's'},
+        {mapKey: 'branchMap', hitsKey: 'b'},
+        {mapKey: 'fnMap', hitsKey: 'f'}
     ].forEach(function (keys) {
         Object.keys(fileCoverage[keys.mapKey])
             .forEach(function (key) {
                 var map = fileCoverage[keys.mapKey][key];
                 var hits = fileCoverage[keys.hitsKey];
 
-                if (keys.mapKey === &#x27;branchMap&#x27;) {
+                if (keys.mapKey === 'branchMap') {
                     var locations = map.locations;
 
                     locations.forEach(function (location, index) {
-                        if (hits[key][index] === 0 &#x26;&#x26; location.skip) {
+                        if (hits[key][index] === 0 &amp;&amp; location.skip) {
                             hits[key][index] = 1;
                         }
                     });
@@ -4231,7 +4224,7 @@ Command.loadAll();
                     return;
                 }
 
-                if (hits[key] === 0 &#x26;&#x26; map.skip) {
+                if (hits[key] === 0 &amp;&amp; map.skip) {
                     hits[key] = 1;
                 }
             });
@@ -4266,7 +4259,7 @@ Command.loadAll();
     Object.keys(second.b).forEach(function (k) {
         var retArray = ret.b[k],
             secondArray = second.b[k];
-        for (i = 0; i &#x3c; retArray.length; i += 1) {
+        for (i = 0; i &lt; retArray.length; i += 1) {
             retArray[i] += secondArray[i];
         }
     });
@@ -4288,7 +4281,7 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">function mergeSummaryObjects() {
     var ret = blankSummary(),
         args = Array.prototype.slice.call(arguments),
-        keys = [&#x27;lines&#x27;, &#x27;statements&#x27;, &#x27;branches&#x27;, &#x27;functions&#x27;],
+        keys = ['lines', 'statements', 'branches', 'functions'],
         increment = function (obj) {
             if (obj) {
                 keys.forEach(function (key) {
@@ -4367,9 +4360,9 @@ Command.loadAll();
     <li>description and source-code<pre class="apidocCodePre">function summarizeFileCoverage(fileCoverage) {
     var ret = blankSummary();
     addDerivedInfoForFile(fileCoverage);
-    ret.lines = computeSimpleTotals(fileCoverage, &#x27;l&#x27;);
-    ret.functions = computeSimpleTotals(fileCoverage, &#x27;f&#x27;, &#x27;fnMap&#x27;);
-    ret.statements = computeSimpleTotals(fileCoverage, &#x27;s&#x27;, &#x27;statementMap&#x27;);
+    ret.lines = computeSimpleTotals(fileCoverage, 'l');
+    ret.functions = computeSimpleTotals(fileCoverage, 'f', 'fnMap');
+    ret.statements = computeSimpleTotals(fileCoverage, 's', 'statementMap');
     ret.branches = computeBranchTotals(fileCoverage);
     ret.linesCovered = fileCoverage.l;
     return ret;
@@ -4409,15 +4402,15 @@ Command.loadAll();
         Object.keys(lines).forEach(function (k) {
             o.lines[k] = lines[k];
             o.coveredLines += 1;
-            if (lines[k] &#x3e; 0) {
+            if (lines[k] &gt; 0) {
                 o.calledLines += 1;
             }
         });
         Object.keys(functions).forEach(function (k) {
-            var name = fnMap[k].name + &#x27;:&#x27; + fnMap[k].line;
+            var name = fnMap[k].name + ':' + fnMap[k].line;
             o.functions[name] = functions[k];
             o.coveredFunctions += 1;
-            if (functions[k] &#x3e; 0) {
+            if (functions[k] &gt; 0) {
                 o.calledFunctions += 1;
             }
         });
@@ -4436,3 +4429,4 @@ Command.loadAll();
     ]
 </div>
 </div>
+</body></html>
